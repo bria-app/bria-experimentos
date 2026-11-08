@@ -549,7 +549,7 @@ Evaluar la capa de decisión del DSS: con la misma regla de pedido del sistema, 
   - Naive: 43.3 en 6–18 meses y 30.2 con 24 meses;
   - SNaive: 40.5–71.3;
   - Oráculo: 13.1.
-- **Lectura:** con 6 a 18 meses de historia, el motor alcanza el mismo servicio con menos inventario que las referencias simples. Con 24 meses (modo mensual), el naive es mejor. La distancia al oráculo (13 días frente a 33–40) muestra cuánto valor queda en mejorar el pronóstico.
+- **Lectura:** con 6 a 18 meses de historia, el motor alcanza el mismo servicio con menos inventario que el naive semanal y el estacional. Con 24 meses (modo mensual), el naive es mejor. Las referencias suavizadas (Exp. 7b) superan al motor con cualquier largo de historia. La distancia al oráculo (13 días frente a 33–40) muestra cuánto valor queda en mejorar el pronóstico.
 
 ### Limitaciones
 - Datos de un gran minorista (M5), no de MYPE.
@@ -560,6 +560,9 @@ Evaluar la capa de decisión del DSS: con la misma regla de pedido del sistema, 
 
 ### Comando y tiempo
 `ENGINE_DIR=<copia de be6a98f> ENGINE_COMMIT=be6a98f… python exp7_simulacion_decision.py`: 171 s con 16 procesos.
+
+### Exp. 7b — Referencias suavizadas (`exp7b_referencias.py`)
+Con la misma regla, las ventas del último mes, el promedio de 4 semanas y el de 3 meses dan 85.8 / 85.7 / 84.6 % de servicio, con 22.8 / 22.9 / 21.5 días de inventario, y necesitan 29.3 / 29.2 / 29.8 días para el 90 %. No dependen de la historia. El motor tiene más servicio solo en el 26.6–47.1 % de los productos (p de Holm ≤ 0.0074 en las 15 pruebas). Salidas: `results/exp7b_*.csv`. **Conclusión:** el motor supera al naive semanal y al estacional, pero no a las referencias suavizadas.
 
 ### Corrección de Holm de los Exp. 1, 3 y 3b (07/11/2026)
 - **Scripts:** `exp3_holm.py`, que también ajusta el Exp. 1 y la censura.
