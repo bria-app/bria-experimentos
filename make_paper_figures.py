@@ -237,6 +237,10 @@ def fig_exp3():
 def fig_exp7():
     """Exp. 7 (paper: Exp. 4, decision simulation): service vs inventory frontier for the safety factor k."""
     agg = pd.read_csv(RES / "exp7_resumen.csv")
+    ref = pd.read_csv(RES / "exp7b_referencias_extra_por_producto.csv")
+    ref = ref[ref["L_meses"] == 6].groupby(["metodo", "k"], as_index=False)[["demanda", "atendido", "inv_unid_dia"]].sum()
+    ref["fill"] = ref["atendido"] / ref["demanda"]
+    ref["dias_inv"] = ref["inv_unid_dia"] / ref["demanda"]
     lab = {"Motor": "Engine (production)", "SNaive": "Seasonal naive", "Naive": "Naive", "Oraculo": "Perfect forecast"}
     col = {"Motor": PALETTE[0], "SNaive": PALETTE[1], "Naive": PALETTE[2], "Oraculo": "#222222"}
     fig, axes = plt.subplots(1, 3, figsize=(10, 3.6), sharey=True)
@@ -247,6 +251,11 @@ def fig_exp7():
                     ls="--" if m == "Oraculo" else "-", color=col[m], label=l)
             k1 = a[a["k"] == 1.0]
             ax.plot(k1["dias_inv"], 100 * k1["fill"], marker="o", ms=7, mfc="white", mec=col[m], mew=1.4, ls="none")
+        ma = ref[ref["metodo"] == "MA4s"].sort_values("k")
+        ax.plot(ma["dias_inv"], 100 * ma["fill"], marker="o", ms=3, lw=1.1, ls="-.", color=PALETTE[4],
+                label="Average of last 4 weeks")
+        k1 = ma[ma["k"] == 1.0]
+        ax.plot(k1["dias_inv"], 100 * k1["fill"], marker="o", ms=7, mfc="white", mec=PALETTE[4], mew=1.4, ls="none")
         ax.axhline(90, color="#888", lw=0.7, ls=":")
         ax.set_title(f"{L} months of initial history")
         ax.set_xlabel("Average inventory (days of demand)")

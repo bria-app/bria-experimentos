@@ -18,6 +18,7 @@ The system itself (web, API and forecasting engine) is published in the
 | Exp. 3 and 3b: 300 short series, injected censoring | `exp3_series_cortas.py` | `results/exp3_*.csv` |
 | Holm adjustment of Exps. 1, 3 and 3b | `exp3_holm.py` | `results/*_holm.csv` |
 | Exp. 4: decision simulation | `exp7_simulacion_decision.py` | `results/exp7_*.csv`, `logs/exp7_log.txt` |
+| Exp. 4: smoothed references (last month, 4-week and 3-month averages) | computed from `results/exp7b_referencias_extra_por_producto.csv` | `results/exp7b_*.csv` |
 | Engine tests and latency | `exp4_pruebas.py` | `results/exp4_latencia.csv`, `logs/exp4_*.txt` |
 | Engine regression after the audit (397 cases) | `regresion_motor_postfix.py` | `logs/engine_postfix_*.txt` |
 | Paper figures (600 dpi) | `make_paper_figures.py` | `paper_figures/` |
