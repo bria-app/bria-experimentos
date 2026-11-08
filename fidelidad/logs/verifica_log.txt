@@ -1,0 +1,23 @@
+python 3.11.4 (Windows-10-10.0.26300-SP0)
+cpu_count 16
+numpy 2.4.4, scipy 1.16.3, pandas 2.3.3, statsmodels 0.14.6, scikit-learn 1.7.2, matplotlib 3.10.7
+motor inventory-dss-ftgm-engine commit be6a98f8bb3a6ebc2c00f46a0ef7a0dc0c28e456 Sat Sep 19 13:50:49 2026 -0500 (arbol limpio)
+(1) BASE vs motor en 210 ajustes: max dif. relativa theta 0.00e+00; max dif. pronostico / nivel 1.73e-04
+(2) Tabla C.1 (paper: 0.0056, 10771.1, 0.0013, -0.0023, -826.69, 1135.56)
+ n_obs                       variante        th0     th1          th2         th3      th4     th5     eta  max_dif_rel_vs_paper
+    37         paper/motor (z con x1)  0.0055531 10770.5   0.00127686 -0.00233975 -826.814 1135.78     NaN                0.0178
+    37                    sin x1 en z  0.0055531 10803.5   0.00127686 -0.00233975 -819.246 1121.91     NaN                0.0178
+    37  MATLAB 2 etapas (eta literal)  0.0055531 10771.1   0.00127686 -0.00233975 -826.695 1135.56 11667.8                0.0178
+    37 MATLAB 2 etapas (eta evaluado)  0.0055531 10772.7   0.00127686 -0.00233975  -826.32 1134.87 11081.1                0.0178
+    37                         t0 = 0  0.0055531 10770.5 -6.40817e-05 -0.00266471 -148.153 1397.02     NaN               1.04929
+    42         paper/motor (z con x1) 0.00556278 10768.4   0.00124902 -0.00238291 -821.417 1143.05     NaN             0.0392132
+    42                    sin x1 en z 0.00556278 10801.4   0.00124902 -0.00238291 -814.013 1128.93     NaN             0.0392132
+    42  MATLAB 2 etapas (eta literal) 0.00556278 10768.9   0.00124902 -0.00238291 -821.307 1142.84 11678.4             0.0392132
+    42 MATLAB 2 etapas (eta evaluado) 0.00556278 10770.6   0.00124902 -0.00238291 -820.938 1142.14 11088.2             0.0392132
+    42                         t0 = 0 0.00556278 10768.4 -0.000109768 -0.00268817 -139.842 1400.62     NaN               1.08444
+    43         paper/motor (z con x1) 0.00568122 10745.5   0.00111006 -0.00255119 -796.994 1175.88     NaN               0.14611
+    43                    sin x1 en z 0.00568122 10779.1   0.00111006 -0.00255119 -790.414 1160.76     NaN               0.14611
+    43  MATLAB 2 etapas (eta literal) 0.00568122 10745.9   0.00111006 -0.00255119 -796.915  1175.7 11711.7               0.14611
+    43 MATLAB 2 etapas (eta evaluado) 0.00568122 10747.6   0.00111006 -0.00255119 -796.578 1174.92 11105.4               0.14611
+    43                         t0 = 0 0.00568122 10745.5 -0.000314258 -0.00276442 -102.277 1416.84     NaN               1.24174
+(3) EDO de 2 estados (rtol 1e-3, por defecto de ode45) vs reduccion por invariante: 350 ajustes; max dif. pronostico / nivel = 1.91e-01; mediana 2.22e-02

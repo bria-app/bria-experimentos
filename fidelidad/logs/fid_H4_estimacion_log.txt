@@ -1,0 +1,17 @@
+GRUPO H4_estimacion: ['nox1_refit', 'matlab_est_paperinit_refit', 'matlab_eta_eval_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                                  h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+matlab_est_paperinit_refit  2.41/2.26  2.71/2.45  2.97/2.23  3.13/2.24  3.44/2.31  4.76/3.34  3.28/2.55
+matlab_eta_eval_refit       2.15/2.11  2.40/2.08  2.55/2.18  3.03/2.48  3.35/2.43  4.37/3.12  3.02/2.56
+nox1_refit                  2.44/2.27  2.78/2.47  3.04/2.18  3.20/2.12  3.52/2.35  4.86/3.31  3.35/2.57
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                                  h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+matlab_est_paperinit_refit  1.81/1.76  2.03/1.90  2.20/1.74  2.32/1.78  2.54/1.80  3.51/2.38  2.80/2.36
+matlab_eta_eval_refit       1.64/1.59  1.84/1.59  1.95/1.74  2.32/1.97  2.55/1.94  3.31/2.38  2.70/2.34
+nox1_refit                  1.83/1.80  2.08/1.93  2.25/1.74  2.36/1.74  2.59/1.83  3.58/2.32  2.85/2.39
+matlab_est_paperinit_refit: N -> {1: 248, 2: 90, 3: 28, 4: 12, 5: 42}; sustituciones SNaive 0
+matlab_eta_eval_refit: N -> {1: 159, 2: 57, 3: 30, 4: 81, 5: 93}; sustituciones SNaive 0
+nox1_refit: N -> {1: 256, 2: 86, 3: 25, 4: 13, 5: 40}; sustituciones SNaive 0
+tiempo 19.5 s

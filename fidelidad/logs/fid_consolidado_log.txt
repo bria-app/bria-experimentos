@@ -1,0 +1,110 @@
+              grupo                     modelo                               clase  MASE_media  MASE_mediana  RMSSE_media  RMSSE_mediana  MASE_media_brecha_pct  MASE_mediana_brecha_pct  RMSSE_media_brecha_pct  RMSSE_mediana_brecha_pct  dentro_10pct_las_4
+H10_error_de_ajuste    ajuste_ult15_base_refit      no es pronostico (diagnostico)        1.06          0.92         0.95           0.86                  -35.5                    -28.0                   -31.0                     -17.2               False
+    H7_cota_oraculo            oraculo_base_N5                  fuga (diagnostico)        1.16          0.91         1.01           0.82                  -29.7                    -28.7                   -26.7                     -21.5               False
+    H7_cota_oraculo               oraculo_base                  fuga (diagnostico)        1.34          1.02         1.20           0.97                  -18.9                    -20.0                   -13.0                      -6.4               False
+H10_error_de_ajuste  ajuste_ult15_matlab_refit      no es pronostico (diagnostico)        1.45          1.20         1.27           1.10                  -12.3                     -6.4                    -8.2                       5.9               False
+    H7_cota_oraculo             oraculo_matlab                  fuga (diagnostico)        1.69          1.28         1.51           1.17                    2.5                      0.1                     9.3                      12.7               False
+H8_orden_con_prueba         Ntest_matlab_refit          fuga parcial (diagnostico)        2.54          2.16         2.28           1.92                   54.1                     68.4                    65.5                      84.3               False
+ H9_reinicio_origen        origen_x_diff_refit pronostico honesto, fuera del paper        2.60          2.03         2.36           1.98                   57.7                     58.9                    70.7                      90.0               False
+ H9_reinicio_origen     origen_x_base_refit_N1 pronostico honesto, fuera del paper        2.63          2.04         2.34           1.89                   59.3                     59.2                    69.6                      82.0               False
+ H9_reinicio_origen      origen_x_matlab_refit pronostico honesto, fuera del paper        2.68          2.10         2.41           1.99                   62.4                     64.3                    74.4                      91.2               False
+ H9_reinicio_origen        origen_x_base_refit pronostico honesto, fuera del paper        2.68          2.10         2.41           1.99                   62.5                     64.3                    74.6                      91.3               False
+      H6_combinadas          matlab_refit_diff                  pronostico honesto        2.93          2.66         2.60           2.34                   77.5                    108.1                    88.6                     125.3               False
+ H2b_ode45_2estados     matlab2s_tol1e-3_refit                  pronostico honesto        2.98          2.77         2.65           2.36                   80.4                    116.1                    91.8                     127.4               False
+  H2_inicial_tiempo          init_matlab_refit                  pronostico honesto        2.99          2.72         2.65           2.35                   81.0                    112.6                    92.1                     125.9               False
+      H6_combinadas         matlab_refit_nmax3                  pronostico honesto        3.01          2.31         2.64           2.08                   82.4                     80.6                    91.2                     100.2               False
+      H6_combinadas            matlab_refit_N1                  pronostico honesto        3.01          2.27         2.61           2.08                   82.4                     77.6                    89.4                     100.2               False
+      H6_combinadas        matlab_refit_ridge3                  pronostico honesto        3.01          2.24         2.59           1.98                   82.6                     75.4                    87.7                      90.0               False
+      H4_estimacion      matlab_eta_eval_refit                  pronostico honesto        3.02          2.56         2.70           2.34                   83.2                     99.9                    95.4                     124.7               False
+H8_orden_con_prueba           Ntest_base_refit          fuga parcial (diagnostico)        3.13          2.45         2.66           2.25                   89.6                     91.7                    92.5                     116.8               False
+ H9_reinicio_origen        origen_y_base_refit pronostico honesto, fuera del paper        3.16          2.54         2.74           2.36                   91.8                     98.2                    98.6                     126.5               False
+       H3_seleccion              N1_fijo_refit                  pronostico honesto        3.20          2.51         2.72           2.32                   93.7                     95.8                    96.9                     123.0               False
+    H1_restauracion                 diff_refit                  pronostico honesto        3.21          2.54         2.75           2.35                   94.3                     98.2                    99.0                     125.6               False
+       H3_seleccion                val12_refit                  pronostico honesto        3.23          2.57         2.76           2.35                   96.0                    100.9                    99.7                     125.9               False
+       H3_seleccion                val15_refit                  pronostico honesto        3.25          2.57         2.78           2.36                   97.2                    101.0                   101.1                     126.7               False
+  H2_inicial_tiempo              init_x1_refit                  pronostico honesto        3.26          2.54         2.79           2.36                   97.8                     98.4                   102.4                     126.8               False
+  H2_inicial_tiempo                T_2pi_refit                  pronostico honesto        3.27          2.49         2.78           2.27                   98.1                     94.4                   101.7                     118.2               False
+       H3_seleccion                  mae_refit                  pronostico honesto        3.27          2.54         2.79           2.38                   98.2                     98.8                   102.2                     129.3               False
+       H3_seleccion                nmax3_refit                  pronostico honesto        3.27          2.54         2.79           2.34                   98.3                     98.2                   101.8                     124.7               False
+       H3_seleccion                 mape_refit                  pronostico honesto        3.27          2.54         2.79           2.38                   98.4                     98.8                   102.5                     129.3               False
+      H4_estimacion matlab_est_paperinit_refit                  pronostico honesto        3.28          2.55         2.80           2.36                   99.0                     98.9                   103.1                     127.3               False
+       H3_seleccion                nmax6_refit                  pronostico honesto        3.29          2.55         2.81           2.37                   99.3                     99.2                   103.3                     127.7               False
+  H2_inicial_tiempo               t0_0.5_refit                  pronostico honesto        3.29          2.55         2.80           2.37                   99.5                     99.2                   103.3                     127.7               False
+            H0_base                 base_refit                  pronostico honesto        3.29          2.55         2.80           2.37                   99.5                     99.2                   103.3                     127.7               False
+  H2_inicial_tiempo                 t0_0_refit                  pronostico honesto        3.29          2.55         2.80           2.37                   99.5                     99.2                   103.3                     127.7               False
+       H3_seleccion                 val3_refit                  pronostico honesto        3.30          2.61         2.81           2.38                   99.8                    103.7                   103.9                     129.1               False
+ H2b_ode45_2estados      paper2s_tol1e-3_refit                  pronostico honesto        3.31          2.63         2.83           2.39                  100.4                    105.7                   105.1                     129.4               False
+       H3_seleccion              N2_fijo_refit                  pronostico honesto        3.31          2.58         2.83           2.40                  100.6                    101.2                   105.0                     131.0               False
+      H4_estimacion                 nox1_refit                  pronostico honesto        3.35          2.57         2.85           2.39                  103.1                    100.9                   106.3                     129.4               False
+       H3_seleccion              fitrmse_refit                  pronostico honesto        3.42          2.71         2.96           2.55                  107.6                    111.9                   114.6                     144.7               False
+ H9_reinicio_origen      origen_x_base_literal pronostico honesto, fuera del paper        3.63          2.81         3.20           2.62                  120.3                    119.4                   132.2                     152.3               False
+  H2_inicial_tiempo            h_1/12_T1_refit                  pronostico honesto        3.79          2.72         3.06           2.51                  129.6                    112.9                   121.5                     141.7               False
+H8_orden_con_prueba       Ntest_matlab_literal          fuga parcial (diagnostico)        3.83          3.02         3.41           2.86                  132.1                    135.8                   146.8                     175.5               False
+      H6_combinadas        matlab_literal_diff                  pronostico honesto        3.95          3.03         3.49           2.89                  139.6                    136.4                   153.1                     177.4               False
+ H2b_ode45_2estados   matlab2s_tol1e-3_literal                  pronostico honesto        3.97          3.05         3.52           2.97                  140.8                    138.3                   155.0                     185.2               False
+ H2b_ode45_2estados   matlab2s_tol1e-9_literal                  pronostico honesto        3.99          3.07         3.54           3.04                  142.1                    139.6                   156.2                     191.9               False
+  H2_inicial_tiempo        init_matlab_literal                  pronostico honesto        3.99          3.07         3.54           3.04                  142.1                    139.6                   156.2                     191.9               False
+H8_orden_con_prueba         Ntest_base_literal          fuga parcial (diagnostico)        4.74          3.47         3.95           3.27                  187.2                    171.2                   186.0                     214.3               False
+    H1_restauracion               diff_literal                  pronostico honesto        4.78          3.55         3.99           3.27                  189.6                    177.0                   189.2                     214.9               False
+            H0_base               base_literal                  pronostico honesto        4.83          3.54         4.02           3.29                  192.4                    176.9                   191.1                     216.1               False
+      H6_combinadas       matlab_literal_val12                  pronostico honesto        6.30          4.31         5.41           3.93                  281.7                    236.6                   291.9                     278.1               False
+  H2_inicial_tiempo           h_1/12_T12_refit                  pronostico honesto       14.47          7.08        12.21           6.20                  777.1                    452.7                   784.9                     496.0               False
+
+Huella por serie (RMSSE 1-15; paper FTGM: s40 3.22, s39 3.10, s20 3.04, s60 2.85):
+                            serie_13  serie_40  serie_39  serie_20  serie_60  max_70  serie_del_max  media_70  media_sin_13
+modelo                                                                                                                     
+ajuste_ult15_base_refit         0.58      1.12      0.65      0.73      0.59    2.21             36      0.95          0.96
+oraculo_base_N5                 9.17      0.69      0.73      0.87      1.15    9.17             13      1.01          0.89
+oraculo_base                    9.76      0.72      1.02      0.93      1.17    9.76             13      1.20          1.08
+ajuste_ult15_matlab_refit       0.54      0.68      0.82      0.80      1.68    4.01             63      1.27          1.28
+oraculo_matlab                 16.88      0.50      1.08      1.60      2.34   16.88             13      1.51          1.29
+SARIMA                         17.09      1.10      1.95      2.08      2.94   17.09             13      2.04          1.82
+ETS                            17.23      0.76      2.25      1.08      1.35   17.23             13      2.18          1.97
+Ntest_matlab_refit             17.20      1.16      1.29      2.97      6.77   17.20             13      2.28          2.07
+Naive                          17.13      0.88      3.27      1.13      1.36   17.13             13      2.30          2.09
+origen_x_base_refit_N1         17.38      1.07      1.87      1.63      3.85   17.38             13      2.34          2.12
+Motor_torneo                   17.30      1.03      2.04      1.47      2.39   17.30             13      2.34          2.12
+origen_x_diff_refit            17.44      1.07      1.81      2.16      4.06   17.44             13      2.36          2.14
+SNaive                         17.05      0.77      2.35      1.67      1.26   17.05             13      2.40          2.19
+origen_x_base_refit            17.29      1.07      1.73      2.35      4.31   17.29             13      2.41          2.19
+origen_x_matlab_refit          17.29      1.07      1.73      2.34      4.31   17.29             13      2.41          2.19
+matlab_refit_ridge3            17.41      1.46      1.56      1.23      3.26   17.41             13      2.59          2.38
+matlab_refit_diff              17.40      1.08      1.79      3.09      6.85   17.40             13      2.60          2.39
+matlab_refit_N1                17.55      1.16      1.61      3.12      7.23   17.55             13      2.61          2.40
+matlab_refit_nmax3             17.36      1.16      1.61      3.04      7.23   17.36             13      2.64          2.42
+matlab2s_tol1e-3_refit         17.36      1.15      1.64      3.05      7.07   17.36             13      2.65          2.43
+init_matlab_refit              17.36      1.16      1.66      3.18      7.14   17.36             13      2.65          2.44
+Ntest_base_refit               17.42      1.84      1.61      2.53      4.75   17.42             13      2.66          2.44
+matlab_eta_eval_refit          17.42      1.07      1.78      2.80      6.22   17.42             13      2.70          2.48
+N1_fijo_refit                  17.49      1.89      1.77      2.53      4.85   17.49             13      2.72          2.50
+origen_y_base_refit            17.51      1.87      1.72      2.91      5.47   17.51             13      2.74          2.53
+diff_refit                     17.58      1.81      1.77      2.82      4.89   17.58             13      2.75          2.53
+val12_refit                    17.54      1.89      1.77      2.94      4.85   17.54             13      2.76          2.54
+val15_refit                    17.58      1.89      1.72      2.78      4.85   17.58             13      2.78          2.56
+T_2pi_refit                    17.42      1.95      1.91      2.40      4.67   17.42             13      2.78          2.57
+mape_refit                     17.51      1.98      1.72      2.95      5.26   17.51             13      2.79          2.58
+init_x1_refit                  17.51      1.88      1.72      2.92      5.43   17.51             13      2.79          2.58
+mae_refit                      17.51      1.89      1.72      2.98      5.27   17.51             13      2.79          2.58
+nmax3_refit                    17.51      1.89      1.70      2.88      5.18   17.51             13      2.79          2.57
+base_refit                     17.51      1.89      1.72      2.94      5.23   17.51             13      2.80          2.59
+t0_0_refit                     17.51      1.89      1.72      2.94      5.23   17.51             13      2.80          2.59
+t0_0.5_refit                   17.51      1.89      1.72      2.94      5.23   17.51             13      2.80          2.59
+matlab_est_paperinit_refit     17.51      1.89      1.72      2.93      5.30   17.51             13      2.80          2.59
+val3_refit                     17.60      1.89      1.69      2.71      5.28   17.60             13      2.81          2.60
+nmax6_refit                    17.53      1.89      1.72      3.04      5.23   17.53             13      2.81          2.59
+paper2s_tol1e-3_refit          17.52      2.04      1.69      2.90      5.20   17.52             13      2.83          2.62
+N2_fijo_refit                  17.53      1.96      1.65      2.84      5.07   17.53             13      2.83          2.62
+nox1_refit                     17.52      1.91      1.71      2.97      5.50   17.52             13      2.85          2.63
+fitrmse_refit                  17.55      1.96      1.82      2.99      5.25   17.55             13      2.96          2.75
+h_1/12_T1_refit                17.51      2.06      1.71      2.96      2.18   22.20             55      3.06          2.85
+origen_x_base_literal          17.46      1.59      2.26      3.45      5.63   17.46             13      3.20          3.00
+Ntest_matlab_literal           17.46      2.66      1.58      3.79      9.05   17.46             13      3.41          3.20
+matlab_literal_diff            17.64      2.66      1.85      3.77      8.91   17.64             13      3.49          3.29
+matlab2s_tol1e-3_literal       17.57      2.67      1.78      3.69      9.23   17.57             13      3.52          3.32
+matlab2s_tol1e-9_literal       17.58      2.66      1.77      3.81      9.17   17.58             13      3.54          3.33
+init_matlab_literal            17.58      2.66      1.77      3.81      9.17   17.58             13      3.54          3.33
+Ntest_base_literal             17.68      3.59      1.74      3.44      6.15   17.89             55      3.95          3.75
+diff_literal                   17.76      3.59      1.83      3.47      6.19   17.76             13      3.99          3.79
+base_literal                   17.72      3.59      1.82      3.52      6.41   18.00             55      4.02          3.82
+matlab_literal_val12           17.78      7.26      2.08      3.42     10.88   26.09             62      5.41          5.23
+h_1/12_T12_refit               18.70     19.91     15.24      3.91      6.97   99.47             17     12.21         12.12

@@ -1,0 +1,59 @@
+H_dias,L_meses,familia,pct
+30,6,Familia FTGM,36.1
+30,6,Suavizado amortiguado,31.1
+30,6,Naive estacional,16.2
+30,6,Promedio movil,11.8
+30,6,Croston-SBA,4.7
+30,9,Familia FTGM,58.4
+30,9,Suavizado amortiguado,21.8
+30,9,Naive estacional,12.4
+30,9,Croston-SBA,3.7
+30,9,Promedio movil,3.7
+30,12,Familia FTGM,65.3
+30,12,Suavizado amortiguado,17.0
+30,12,Naive estacional,11.3
+30,12,Croston-SBA,4.0
+30,12,Promedio movil,2.3
+30,18,Familia FTGM,69.0
+30,18,Suavizado amortiguado,16.3
+30,18,Naive estacional,9.7
+30,18,Croston-SBA,4.3
+30,18,Promedio movil,0.7
+30,24,Familia FTGM,60.0
+30,24,Suavizado amortiguado,22.0
+30,24,Naive estacional,16.0
+30,24,Croston-SBA,2.0
+30,36,Familia FTGM,51.7
+30,36,Suavizado estacional,21.3
+30,36,Suavizado amortiguado,20.7
+30,36,Naive estacional,5.0
+30,36,Croston-SBA,1.3
+90,6,Suavizado amortiguado,33.8
+90,6,Familia FTGM,27.7
+90,6,Naive estacional,22.0
+90,6,Promedio movil,11.8
+90,6,Croston-SBA,4.7
+90,9,Familia FTGM,51.0
+90,9,Suavizado amortiguado,26.8
+90,9,Naive estacional,14.8
+90,9,Croston-SBA,3.7
+90,9,Promedio movil,3.7
+90,12,Familia FTGM,60.7
+90,12,Suavizado amortiguado,21.7
+90,12,Naive estacional,11.3
+90,12,Croston-SBA,4.0
+90,12,Promedio movil,2.3
+90,18,Familia FTGM,70.7
+90,18,Suavizado amortiguado,16.3
+90,18,Naive estacional,8.0
+90,18,Croston-SBA,4.3
+90,18,Promedio movil,0.7
+90,24,Familia FTGM,58.0
+90,24,Naive estacional,20.7
+90,24,Suavizado amortiguado,19.3
+90,24,Croston-SBA,2.0
+90,36,Familia FTGM,49.7
+90,36,Suavizado amortiguado,22.7
+90,36,Suavizado estacional,17.7
+90,36,Naive estacional,8.7
+90,36,Croston-SBA,1.3

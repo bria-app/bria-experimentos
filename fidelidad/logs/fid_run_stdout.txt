@@ -1,0 +1,238 @@
+GRUPO H0_base: ['base_literal', 'base_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                    h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+base_literal  3.57/3.14  2.77/2.35  3.80/2.47  6.39/4.69  6.24/4.64  5.15/3.20  4.83/3.54
+base_refit    2.39/2.23  2.72/2.46  2.98/2.25  3.14/2.16  3.46/2.30  4.77/3.29  3.29/2.55
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                    h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+base_literal  2.66/2.53  2.06/1.86  2.78/1.94  4.64/3.76  4.54/3.48  3.74/2.47  4.02/3.29
+base_refit    1.80/1.77  2.04/1.90  2.21/1.74  2.32/1.77  2.55/1.79  3.52/2.32  2.80/2.37
+base_literal: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+base_refit: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+tiempo 13.0 s
+GRUPO H1_restauracion: ['diff_literal', 'diff_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                    h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+diff_literal  3.76/3.41  2.88/2.41  3.37/2.55  6.11/4.43  6.45/4.81  5.28/3.54  4.78/3.55
+diff_refit    2.09/1.94  2.68/2.26  2.92/2.18  3.15/2.39  3.42/2.40  4.68/3.19  3.21/2.54
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                    h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+diff_literal  2.81/2.63  2.15/1.85  2.48/1.95  4.44/3.58  4.69/3.70  3.85/2.71  3.99/3.27
+diff_refit    1.57/1.56  2.01/1.77  2.17/1.72  2.34/1.70  2.53/1.79  3.45/2.51  2.75/2.35
+diff_literal: N -> {1: 250, 2: 80, 3: 37, 4: 21, 5: 32}; sustituciones SNaive 0
+diff_refit: N -> {1: 250, 2: 80, 3: 37, 4: 21, 5: 32}; sustituciones SNaive 0
+tiempo 14.5 s
+GRUPO H2_inicial_tiempo: ['init_x1_refit', 'init_matlab_refit', 'init_matlab_literal', 't0_0_refit', 't0_0.5_refit', 'h_1/12_T1_refit', 'h_1/12_T12_refit', 'T_2pi_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                            h=1         h=3         h=6         h=9        h=12         h=15      h=1-15
+T_2pi_refit           2.61/2.42   2.70/2.49   2.49/1.97   3.33/2.35   3.55/2.20    4.76/3.50   3.27/2.49
+h_1/12_T12_refit     12.95/3.02  13.33/3.37  13.38/5.51  13.96/7.23  15.26/9.32  18.31/13.19  14.47/7.08
+h_1/12_T1_refit       2.66/2.23   3.14/2.49   3.47/2.26   3.73/2.38   4.02/2.68    5.44/3.53   3.79/2.72
+init_matlab_literal   2.81/2.59   2.36/2.05   2.84/2.27   5.29/3.56   5.20/3.77    4.42/2.93   3.99/3.07
+init_matlab_refit     2.25/2.00   2.27/2.20   2.42/2.19   3.10/2.55   3.43/2.45    4.07/2.98   2.99/2.72
+init_x1_refit         2.41/2.26   2.69/2.44   2.94/2.27   3.11/2.17   3.41/2.31    4.74/3.35   3.26/2.54
+t0_0.5_refit          2.39/2.23   2.72/2.46   2.98/2.25   3.14/2.16   3.46/2.30    4.77/3.29   3.29/2.55
+t0_0_refit            2.39/2.23   2.72/2.46   2.98/2.25   3.14/2.16   3.46/2.30    4.77/3.29   3.29/2.55
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                           h=1         h=3         h=6         h=9        h=12         h=15      h=1-15
+T_2pi_refit          1.98/1.93   2.05/1.93   1.85/1.52   2.47/1.89   2.63/1.72    3.53/2.75   2.78/2.27
+h_1/12_T12_refit     9.87/2.20  10.13/2.53  10.20/4.22  10.68/5.41  11.63/7.14  13.87/10.32  12.21/6.20
+h_1/12_T1_refit      1.92/1.72   2.26/1.94   2.46/1.74   2.62/1.84   2.84/2.11    3.86/2.51   3.06/2.51
+init_matlab_literal  2.16/1.90   1.80/1.57   2.17/1.81   3.99/2.89   3.93/2.95    3.34/2.38   3.54/3.04
+init_matlab_refit    1.71/1.57   1.73/1.64   1.84/1.70   2.34/2.00   2.58/1.88    3.09/2.32   2.65/2.35
+init_x1_refit        1.81/1.79   2.02/1.89   2.18/1.74   2.30/1.76   2.53/1.79    3.50/2.38   2.79/2.36
+t0_0.5_refit         1.80/1.77   2.04/1.90   2.21/1.74   2.32/1.77   2.55/1.79    3.52/2.32   2.80/2.37
+t0_0_refit           1.80/1.77   2.04/1.90   2.21/1.74   2.32/1.77   2.55/1.79    3.52/2.32   2.80/2.37
+T_2pi_refit: N -> {1: 307, 2: 70, 3: 23, 4: 10, 5: 10}; sustituciones SNaive 0
+h_1/12_T12_refit: N -> {0: 57, 1: 263, 2: 75, 3: 13, 4: 5, 5: 7}; sustituciones SNaive 57
+h_1/12_T1_refit: N -> {1: 274, 2: 70, 3: 23, 4: 16, 5: 37}; sustituciones SNaive 0
+init_matlab_literal: N -> {1: 159, 2: 45, 3: 22, 4: 71, 5: 123}; sustituciones SNaive 0
+init_matlab_refit: N -> {1: 159, 2: 45, 3: 22, 4: 71, 5: 123}; sustituciones SNaive 0
+init_x1_refit: N -> {1: 245, 2: 93, 3: 27, 4: 14, 5: 41}; sustituciones SNaive 0
+t0_0.5_refit: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+t0_0_refit: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+tiempo 64.8 s
+GRUPO H3_seleccion: ['val12_refit', 'val15_refit', 'val3_refit', 'nmax3_refit', 'nmax6_refit', 'mape_refit', 'mae_refit', 'fitrmse_refit', 'N1_fijo_refit', 'N2_fijo_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                     h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+N1_fijo_refit  2.01/1.89  2.67/2.29  3.03/2.46  3.09/1.99  3.53/2.37  4.65/2.94  3.20/2.51
+N2_fijo_refit  2.25/2.18  2.99/2.66  2.80/2.11  3.21/2.32  3.44/2.37  5.06/3.64  3.31/2.58
+fitrmse_refit  2.86/2.61  2.76/2.38  2.97/2.22  3.16/2.16  3.30/2.31  4.90/3.43  3.42/2.71
+mae_refit      2.35/2.13  2.70/2.32  3.02/2.32  3.13/2.23  3.45/2.34  4.72/3.08  3.27/2.54
+mape_refit     2.38/2.16  2.68/2.30  3.01/2.32  3.13/2.08  3.45/2.28  4.69/3.11  3.27/2.54
+nmax3_refit    2.25/2.07  2.77/2.46  2.98/2.27  3.16/2.28  3.47/2.32  4.81/3.29  3.27/2.54
+nmax6_refit    2.42/2.27  2.73/2.46  2.96/2.20  3.14/2.16  3.44/2.30  4.77/3.29  3.29/2.55
+val12_refit    2.12/1.93  2.76/2.29  2.98/2.26  3.16/2.18  3.43/2.20  4.80/3.26  3.23/2.57
+val15_refit    2.19/2.11  2.77/2.49  2.95/2.23  3.11/2.22  3.47/2.29  4.78/3.46  3.25/2.57
+val3_refit     2.29/2.09  2.88/2.59  2.91/2.20  3.18/2.23  3.41/2.36  4.92/3.36  3.30/2.61
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                     h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+N1_fijo_refit  1.50/1.49  2.00/1.78  2.25/1.88  2.28/1.55  2.61/1.81  3.43/2.28  2.72/2.32
+N2_fijo_refit  1.69/1.69  2.24/2.08  2.08/1.65  2.37/1.79  2.54/1.92  3.74/2.71  2.83/2.40
+fitrmse_refit  2.15/2.11  2.08/1.82  2.20/1.76  2.33/1.74  2.44/1.68  3.62/2.58  2.96/2.55
+mae_refit      1.77/1.67  2.02/1.80  2.24/1.77  2.31/1.72  2.55/1.86  3.47/2.14  2.79/2.38
+mape_refit     1.79/1.73  2.01/1.74  2.24/1.77  2.31/1.60  2.55/1.77  3.46/2.16  2.79/2.38
+nmax3_refit    1.69/1.61  2.08/1.95  2.21/1.71  2.34/1.82  2.56/1.79  3.55/2.37  2.79/2.34
+nmax6_refit    1.82/1.79  2.05/1.90  2.20/1.74  2.32/1.72  2.54/1.79  3.52/2.32  2.81/2.37
+val12_refit    1.59/1.52  2.06/1.80  2.21/1.83  2.33/1.69  2.53/1.81  3.53/2.45  2.76/2.35
+val15_refit    1.64/1.60  2.08/1.96  2.19/1.83  2.30/1.70  2.56/1.81  3.54/2.59  2.78/2.36
+val3_refit     1.72/1.66  2.16/2.00  2.16/1.71  2.34/1.77  2.52/1.78  3.63/2.56  2.81/2.38
+N1_fijo_refit: N -> {1: 420}; sustituciones SNaive 0
+N2_fijo_refit: N -> {2: 420}; sustituciones SNaive 0
+fitrmse_refit: N -> {1: 1, 2: 16, 3: 13, 4: 30, 5: 360}; sustituciones SNaive 0
+mae_refit: N -> {1: 238, 2: 93, 3: 27, 4: 19, 5: 43}; sustituciones SNaive 0
+mape_refit: N -> {1: 228, 2: 104, 3: 28, 4: 20, 5: 40}; sustituciones SNaive 0
+nmax3_refit: N -> {1: 263, 2: 99, 3: 58}; sustituciones SNaive 0
+nmax6_refit: N -> {1: 254, 2: 83, 3: 22, 4: 15, 5: 25, 6: 21}; sustituciones SNaive 0
+val12_refit: N -> {1: 305, 2: 62, 3: 29, 4: 6, 5: 18}; sustituciones SNaive 0
+val15_refit: N -> {1: 292, 2: 70, 3: 31, 4: 11, 5: 16}; sustituciones SNaive 0
+val3_refit: N -> {1: 265, 2: 79, 3: 14, 4: 8, 5: 54}; sustituciones SNaive 0
+tiempo 39.5 s
+GRUPO H6_combinadas: ['matlab_literal_val12', 'matlab_refit_N1', 'matlab_refit_nmax3', 'matlab_refit_diff', 'matlab_literal_diff', 'matlab_refit_ridge3']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                            h=1        h=3        h=6        h=9       h=12        h=15     h=1-15
+matlab_literal_diff   2.93/2.59  2.45/2.15  2.63/2.21  5.14/3.51  5.34/3.93   4.47/3.39  3.95/3.03
+matlab_literal_val12  4.59/3.40  5.28/3.50  5.23/3.89  5.29/3.95  5.61/3.94  11.09/6.40  6.30/4.31
+matlab_refit_N1       1.92/1.74  2.41/2.16  2.69/2.38  3.05/2.28  3.48/2.28   4.31/3.21  3.01/2.27
+matlab_refit_diff     1.93/1.71  2.30/2.13  2.38/2.13  3.04/2.24  3.49/2.57   4.06/2.83  2.93/2.66
+matlab_refit_nmax3    2.10/1.87  2.51/2.18  2.59/2.23  3.03/2.42  3.35/2.33   4.33/3.22  3.01/2.31
+matlab_refit_ridge3   2.14/1.88  2.35/1.94  2.57/2.32  3.06/2.29  3.61/2.62   4.18/3.06  3.01/2.24
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                            h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+matlab_literal_diff   2.25/2.09  1.88/1.60  2.01/1.81  3.87/2.80  4.04/3.17  3.38/2.59  3.49/2.89
+matlab_literal_val12  3.39/2.56  3.84/2.78  3.87/3.00  3.94/3.13  4.17/3.14  7.74/4.84  5.41/3.93
+matlab_refit_N1       1.47/1.35  1.84/1.57  2.03/1.78  2.29/1.68  2.61/1.75  3.23/2.32  2.61/2.08
+matlab_refit_diff     1.46/1.41  1.76/1.55  1.81/1.67  2.30/1.71  2.62/2.00  3.08/2.26  2.60/2.34
+matlab_refit_nmax3    1.61/1.46  1.92/1.66  1.96/1.74  2.29/1.82  2.52/1.79  3.27/2.50  2.64/2.08
+matlab_refit_ridge3   1.63/1.41  1.79/1.52  1.95/1.80  2.31/1.75  2.73/2.02  3.14/2.32  2.59/1.98
+matlab_literal_diff: N -> {1: 159, 2: 43, 3: 25, 4: 79, 5: 114}; sustituciones SNaive 0
+matlab_literal_val12: N -> {1: 149, 2: 43, 3: 34, 4: 75, 5: 119}; sustituciones SNaive 0
+matlab_refit_N1: N -> {1: 420}; sustituciones SNaive 0
+matlab_refit_diff: N -> {1: 159, 2: 43, 3: 25, 4: 79, 5: 114}; sustituciones SNaive 0
+matlab_refit_nmax3: N -> {1: 262, 2: 72, 3: 86}; sustituciones SNaive 0
+matlab_refit_ridge3: N -> {1: 165, 2: 49, 3: 46, 4: 80, 5: 80}; sustituciones SNaive 0
+tiempo 24.9 s
+GRUPO H7_cota_oraculo: ['oraculo_base', 'oraculo_matlab', 'oraculo_base_N5']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                       h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+oraculo_base     1.42/1.12  1.19/0.90  1.23/1.04  1.36/1.02  1.41/1.04  1.65/1.11  1.34/1.02
+oraculo_base_N5  1.22/0.96  1.18/0.84  1.03/0.82  1.23/0.82  1.19/0.80  1.25/0.88  1.16/0.91
+oraculo_matlab   2.07/1.42  1.87/1.22  1.29/1.14  1.58/1.24  1.76/1.27  1.88/1.36  1.69/1.28
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                       h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+oraculo_base     1.09/0.84  0.91/0.71  0.92/0.83  1.02/0.80  1.06/0.83  1.24/0.90  1.20/0.97
+oraculo_base_N5  0.93/0.73  0.90/0.65  0.77/0.64  0.92/0.62  0.89/0.63  0.94/0.69  1.01/0.82
+oraculo_matlab   1.58/1.09  1.43/0.95  0.99/0.88  1.21/0.95  1.34/0.94  1.44/1.01  1.51/1.17
+oraculo_base: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+oraculo_base_N5: N -> {5: 420}; sustituciones SNaive 0
+oraculo_matlab: N -> {1: 159, 2: 45, 3: 22, 4: 71, 5: 123}; sustituciones SNaive 0
+tiempo 17.1 s
+GRUPO H8_orden_con_prueba: ['Ntest_base_literal', 'Ntest_base_refit', 'Ntest_matlab_literal', 'Ntest_matlab_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                            h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+Ntest_base_literal    3.30/2.99  2.69/2.23  3.80/2.70  6.29/4.65  6.47/4.69  4.99/3.03  4.74/3.47
+Ntest_base_refit      1.98/1.84  2.58/2.30  3.00/2.31  3.04/1.92  3.56/2.43  4.47/2.81  3.13/2.45
+Ntest_matlab_literal  2.80/2.44  2.33/1.89  2.75/2.08  5.03/3.45  5.03/3.49  4.14/2.87  3.83/3.02
+Ntest_matlab_refit    1.96/1.64  2.07/2.00  2.14/1.89  2.48/1.73  2.84/1.91  3.49/2.44  2.54/2.16
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                            h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+Ntest_base_literal    2.45/2.34  2.00/1.74  2.78/2.03  4.58/3.61  4.70/3.72  3.63/2.37  3.95/3.27
+Ntest_base_refit      1.49/1.42  1.94/1.76  2.23/1.81  2.24/1.51  2.62/1.80  3.29/2.19  2.66/2.25
+Ntest_matlab_literal  2.13/1.92  1.77/1.51  2.10/1.59  3.83/2.71  3.83/2.68  3.17/2.17  3.41/2.86
+Ntest_matlab_refit    1.49/1.29  1.58/1.49  1.64/1.42  1.89/1.35  2.16/1.42  2.67/1.87  2.28/1.92
+Ntest_base_literal: N -> {1: 295, 2: 66, 3: 23, 4: 6, 5: 30}; sustituciones SNaive 0
+Ntest_base_refit: N -> {1: 267, 2: 82, 3: 27, 4: 11, 5: 33}; sustituciones SNaive 0
+Ntest_matlab_literal: N -> {1: 189, 2: 40, 3: 17, 4: 79, 5: 95}; sustituciones SNaive 0
+Ntest_matlab_refit: N -> {1: 178, 2: 64, 3: 33, 4: 54, 5: 91}; sustituciones SNaive 0
+tiempo 23.0 s
+GRUPO H9_reinicio_origen: ['origen_x_base_refit', 'origen_x_base_literal', 'origen_x_matlab_refit', 'origen_y_base_refit', 'origen_x_base_refit_N1', 'origen_x_diff_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                              h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+origen_x_base_literal   2.49/2.36  2.21/2.04  2.70/2.23  4.66/3.58  4.87/3.64  4.21/2.93  3.63/2.81
+origen_x_base_refit     1.60/1.51  1.93/1.69  2.28/1.72  2.89/2.07  3.02/2.20  3.94/2.83  2.68/2.10
+origen_x_base_refit_N1  1.32/1.18  1.95/1.67  2.22/1.76  2.93/2.19  3.04/2.31  3.89/2.91  2.63/2.04
+origen_x_diff_refit     1.31/1.20  1.87/1.66  2.14/1.65  2.79/1.88  3.06/2.27  3.84/2.75  2.60/2.03
+origen_x_matlab_refit   1.60/1.51  1.93/1.69  2.27/1.72  2.89/2.07  3.02/2.20  3.94/2.83  2.68/2.10
+origen_y_base_refit     2.33/2.25  2.61/2.43  2.84/2.24  3.01/2.24  3.31/2.32  4.59/3.35  3.16/2.54
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                              h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+origen_x_base_literal   1.90/1.75  1.70/1.53  2.03/1.71  3.45/2.69  3.61/2.95  3.15/2.22  3.20/2.62
+origen_x_base_refit     1.23/1.17  1.47/1.34  1.72/1.37  2.17/1.60  2.25/1.78  2.95/2.24  2.41/1.99
+origen_x_base_refit_N1  1.00/0.86  1.47/1.35  1.67/1.31  2.19/1.69  2.27/1.81  2.89/2.30  2.34/1.89
+origen_x_diff_refit     1.00/0.91  1.42/1.30  1.62/1.28  2.10/1.44  2.30/1.74  2.87/2.22  2.36/1.98
+origen_x_matlab_refit   1.22/1.17  1.46/1.34  1.71/1.36  2.17/1.60  2.25/1.78  2.94/2.24  2.41/1.99
+origen_y_base_refit     1.77/1.70  1.98/1.88  2.13/1.73  2.26/1.76  2.47/1.84  3.43/2.38  2.74/2.36
+origen_x_base_literal: N -> {1: 212, 2: 86, 3: 42, 4: 19, 5: 61}; sustituciones SNaive 0
+origen_x_base_refit: N -> {1: 212, 2: 86, 3: 42, 4: 19, 5: 61}; sustituciones SNaive 0
+origen_x_base_refit_N1: N -> {1: 420}; sustituciones SNaive 0
+origen_x_diff_refit: N -> {1: 220, 2: 74, 3: 44, 4: 25, 5: 57}; sustituciones SNaive 0
+origen_x_matlab_refit: N -> {1: 212, 2: 85, 3: 43, 4: 19, 5: 61}; sustituciones SNaive 0
+origen_y_base_refit: N -> {1: 244, 2: 93, 3: 28, 4: 13, 5: 42}; sustituciones SNaive 0
+tiempo 28.6 s
+GRUPO H10_error_de_ajuste: ['ajuste_ult15_matlab_refit', 'ajuste_ult15_base_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                                 h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+ajuste_ult15_base_refit    1.34/1.22  1.16/1.05  0.86/0.75  1.07/0.89  1.00/0.82  1.37/1.20  1.06/0.92
+ajuste_ult15_matlab_refit  2.12/1.83  1.92/1.58  1.31/1.05  1.27/1.00  1.28/1.11  1.38/1.11  1.45/1.20
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                                 h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+ajuste_ult15_base_refit    1.03/0.91  0.90/0.78  0.65/0.59  0.80/0.70  0.74/0.65  1.02/0.95  0.95/0.86
+ajuste_ult15_matlab_refit  1.59/1.43  1.45/1.21  0.99/0.84  0.96/0.76  0.95/0.79  1.03/0.83  1.27/1.10
+ajuste_ult15_base_refit: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+ajuste_ult15_matlab_refit: N -> {1: 159, 2: 45, 3: 22, 4: 71, 5: 123}; sustituciones SNaive 0
+tiempo 15.8 s
+GRUPO H2b_ode45_2estados: ['matlab2s_tol1e-3_literal', 'matlab2s_tol1e-3_refit', 'matlab2s_tol1e-9_literal', 'paper2s_tol1e-3_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                                h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+matlab2s_tol1e-3_literal  2.76/2.47  2.35/2.07  2.82/2.23  5.23/3.55  5.16/3.68  4.41/3.02  3.97/3.05
+matlab2s_tol1e-3_refit    2.22/2.02  2.25/2.24  2.40/2.25  3.10/2.40  3.41/2.43  4.10/3.01  2.98/2.77
+matlab2s_tol1e-9_literal  2.81/2.59  2.36/2.05  2.84/2.27  5.29/3.56  5.20/3.77  4.42/2.93  3.99/3.07
+paper2s_tol1e-3_refit     2.49/2.27  2.73/2.36  3.03/2.28  3.13/2.18  3.47/2.26  4.75/3.19  3.31/2.63
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                                h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+matlab2s_tol1e-3_literal  2.12/1.87  1.80/1.55  2.15/1.80  3.94/2.87  3.90/2.97  3.34/2.38  3.52/2.97
+matlab2s_tol1e-3_refit    1.69/1.55  1.72/1.65  1.83/1.70  2.34/1.92  2.57/1.84  3.11/2.33  2.65/2.36
+matlab2s_tol1e-9_literal  2.16/1.90  1.80/1.57  2.17/1.81  3.99/2.89  3.93/2.95  3.34/2.38  3.54/3.04
+paper2s_tol1e-3_refit     1.87/1.77  2.05/1.85  2.24/1.75  2.32/1.72  2.56/1.74  3.51/2.29  2.83/2.39
+matlab2s_tol1e-3_literal: N -> {1: 159, 2: 42, 3: 27, 4: 69, 5: 123}; sustituciones SNaive 0
+matlab2s_tol1e-3_refit: N -> {1: 159, 2: 42, 3: 27, 4: 69, 5: 123}; sustituciones SNaive 0
+matlab2s_tol1e-9_literal: N -> {1: 159, 2: 45, 3: 22, 4: 71, 5: 123}; sustituciones SNaive 0
+paper2s_tol1e-3_refit: N -> {1: 217, 2: 72, 3: 41, 4: 30, 5: 60}; sustituciones SNaive 0
+tiempo 22.4 s
+GRUPO H4_estimacion: ['nox1_refit', 'matlab_est_paperinit_refit', 'matlab_eta_eval_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                                  h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+matlab_est_paperinit_refit  2.41/2.26  2.71/2.45  2.97/2.23  3.13/2.24  3.44/2.31  4.76/3.34  3.28/2.55
+matlab_eta_eval_refit       2.15/2.11  2.40/2.08  2.55/2.18  3.03/2.48  3.35/2.43  4.37/3.12  3.02/2.56
+nox1_refit                  2.44/2.27  2.78/2.47  3.04/2.18  3.20/2.12  3.52/2.35  4.86/3.31  3.35/2.57
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                                  h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+matlab_est_paperinit_refit  1.81/1.76  2.03/1.90  2.20/1.74  2.32/1.78  2.54/1.80  3.51/2.38  2.80/2.36
+matlab_eta_eval_refit       1.64/1.59  1.84/1.59  1.95/1.74  2.32/1.97  2.55/1.94  3.31/2.38  2.70/2.34
+nox1_refit                  1.83/1.80  2.08/1.93  2.25/1.74  2.36/1.74  2.59/1.83  3.58/2.32  2.85/2.39
+matlab_est_paperinit_refit: N -> {1: 248, 2: 90, 3: 28, 4: 12, 5: 42}; sustituciones SNaive 0
+matlab_eta_eval_refit: N -> {1: 159, 2: 57, 3: 30, 4: 81, 5: 93}; sustituciones SNaive 0
+nox1_refit: N -> {1: 256, 2: 86, 3: 25, 4: 13, 5: 40}; sustituciones SNaive 0
+tiempo 19.5 s

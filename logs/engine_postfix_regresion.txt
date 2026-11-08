@@ -1,0 +1,29 @@
+Regresion numerica del motor FTGM: be6a98f (antes) vs. correcciones de auditoria (despues)
+antes:   <tmp>/engine_be6a98f (67.2 s)
+despues: <thesis>/inventory-dss-ftgm-engine (66.7 s)
+tolerancia relativa/absoluta: 1e-09
+
+Series: 37; casos (series x contrato): 397
+Estados (antes): {'fallback': 196, 'ok': 201}
+Modelos ganadores (antes): {'MovingAverage': 12, 'FTGMCombo': 67, 'SeasonalNaive': 64, 'FTGM': 134, 'DampedTrend': 86, 'SeasonalDamped': 25, 'CrostonSBA': 9}
+Casos identicos: 396; casos con diferencias: 1
+
+-- SINTETICO_siempre_agotado|auto|H30 (26 diferencias)
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.candidates: largo 1 -> 0
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.explanations: largo 4 -> 1
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.explanations[0]: 'Automática: solo 22 semanas completas de historia (< 26); no alcanza para identificar estacionalidad → promedio móvil semanal.' -> 'Siempre agotado: registre ventas perdidas para estimar la demanda'
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.frequency: 'weekly' -> None
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.frequency_reason: 'Automática: solo 22 semanas completas de historia (< 26); no alcanza para identificar estacionalidad → promedio móvil semanal.' -> None
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.history_end: '2016-01-25' -> None
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.history_start: '2015-08-31' -> None
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.holdout: {'origins': 8, 'horizon': 5, 'mae': 0.0, 'rmse': 0.0, 'mape': None, 'mase': None, 'wape': None, 'total_wape': None} -> None
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.intermittent: True -> False
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.interval_level: 0.9 -> None
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.n_periods: 22 -> 0
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.period: 52 -> None
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.stockout_periods: 22 -> 0
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].diagnostics.zero_share: 1.0 -> None
+   SINTETICO_siempre_agotado|auto|H30.forecasts[0].fallback_reason: 'Demanda intermitente: 100% de los periodos sin ventas (> 50%). Se usa Croston-SBA, que pronostica una tasa de demanda estable y es más adecuado que el FTGM para ventas esporádicas.' -> 'Siempre agotado: registre ventas perdidas para estimar la demanda'
+   ... 11 mas
+
+RESULTADO: OK - salidas identicas salvo el caso documentado 'siempre agotado' (M-15)

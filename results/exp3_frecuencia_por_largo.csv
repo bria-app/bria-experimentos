@@ -1,0 +1,17 @@
+H_dias,L_meses,frecuencia,n
+30,6,weekly,296
+30,9,weekly,298
+30,12,weekly,300
+30,18,weekly,300
+30,24,monthly,262
+30,24,weekly,38
+30,36,monthly,298
+30,36,weekly,2
+90,6,weekly,296
+90,9,weekly,298
+90,12,weekly,300
+90,18,weekly,300
+90,24,monthly,262
+90,24,weekly,38
+90,36,monthly,298
+90,36,weekly,2

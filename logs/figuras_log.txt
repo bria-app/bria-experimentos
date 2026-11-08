@@ -1,0 +1,1 @@
+figuras generadas: ['fig_exp1_mase_horizonte.png', 'fig_exp1_rmsse_boxplot.png', 'fig_exp2_grados_gris.png', 'fig_exp3_censura_ablacion.png', 'fig_exp3_ganador_por_largo.png', 'fig_exp3_wape_por_largo.png']

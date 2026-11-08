@@ -1,0 +1,96 @@
+EXPERIMENTO 7 - Simulacion de la decision de reposicion
+python 3.11.4 (Windows-10-10.0.26300-SP0)
+cpu_count 16
+numpy 2.4.4, scipy 1.16.3, pandas 2.3.3, statsmodels 0.14.6, scikit-learn 1.7.2, matplotlib 3.10.7
+motor inventory-dss-ftgm-engine commit be6a98f8bb3a6ebc2c00f46a0ef7a0dc0c28e456 Sat Sep 19 13:50:49 2026 -0500 (con cambios locales sin commit)
+Motor: <tmp>/engine_be6a98f commit be6a98f8bb3a6ebc2c00f46a0ef7a0dc0c28e456
+Revisiones: ['2015-09-01', '2015-10-01', '2015-11-01', '2015-12-01', '2016-01-01', '2016-02-01']; fin 2016-03-01; L=(6, 9, 12, 18, 24); plazo 7 d; revision 30 d; k=(0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 3.0)
+Elegibles: 17863 de 30490; poblacion por categoria: {'FOODS': 9583, 'HOBBIES': 2732, 'HOUSEHOLD': 5548}; muestra: {'FOODS': 161, 'HOBBIES': 46, 'HOUSEHOLD': 93}
+  50/300 productos (58 s)
+  100/300 productos (86 s)
+  150/300 productos (109 s)
+  200/300 productos (127 s)
+  250/300 productos (149 s)
+  300/300 productos (170 s)
+Revisiones sin pronostico del motor (skipped): 51 de 9000
+
+Resumen con k = 1 (regla del sistema sin stock de seguridad):
+ L_meses  metodo  fill  perdidas_pct  dias_inv  fill_mediana_producto
+       6   Motor 0.831        16.875    23.971                  0.867
+       6   Naive 0.791        20.945    23.175                  0.800
+       6 Oraculo 0.985         1.527    15.801                  0.985
+       6  SNaive 0.791        20.945    23.175                  0.800
+       9   Motor 0.821        17.923    23.877                  0.855
+       9   Naive 0.791        20.945    23.175                  0.800
+       9 Oraculo 0.985         1.527    15.801                  0.985
+       9  SNaive 0.804        19.602    23.434                  0.822
+      12   Motor 0.826        17.354    21.963                  0.849
+      12   Naive 0.791        20.945    23.175                  0.800
+      12 Oraculo 0.985         1.527    15.801                  0.985
+      12  SNaive 0.788        21.182    21.280                  0.853
+      18   Motor 0.807        19.310    19.974                  0.834
+      18   Naive 0.791        20.945    23.175                  0.800
+      18 Oraculo 0.985         1.527    15.801                  0.985
+      18  SNaive 0.773        22.709    20.861                  0.849
+      24   Motor 0.803        19.725    20.651                  0.860
+      24   Naive 0.854        14.593    23.238                  0.880
+      24 Oraculo 0.985         1.527    15.801                  0.985
+      24  SNaive 0.747        25.290    19.785                  0.845
+
+Dias de inventario necesarios para una tasa de servicio de 90 % y 95 %:
+ L_meses  metodo  dias_inv_fill90  dias_inv_fill95
+       6   Motor            37.09            79.05
+       6   Naive            43.31            88.64
+       6 Oraculo            13.12            14.70
+       6  SNaive            43.31            88.64
+       9   Motor            40.36            77.59
+       9   Naive            43.31            88.64
+       9 Oraculo            13.12            14.70
+       9  SNaive            40.50            64.71
+      12   Motor            34.43            58.28
+      12   Naive            43.31            88.64
+      12 Oraculo            13.12            14.70
+      12  SNaive            46.14            93.30
+      18   Motor            33.41            60.27
+      18   Naive            43.31            88.64
+      18 Oraculo            13.12            14.70
+      18  SNaive            53.09              NaN
+      24   Motor            37.66            73.00
+      24   Naive            30.21            49.40
+      24 Oraculo            13.12            14.70
+      24  SNaive            71.28              NaN
+
+Pruebas pareadas (k = 1), p con correccion de Holm sobre las 30 pruebas:
+ L_meses     comparacion       metrica mejor_si   n  motor_mejor_pct  empate_pct  mediana_dif   wilcoxon_p       p_holm
+       6  Motor vs Naive     fill_prod    mayor 297             63.6         6.4       0.0437 9.228610e-09 2.399439e-07
+       6  Motor vs Naive       perdido    menor 300             63.0         7.3      -5.0000 4.775588e-09 1.432676e-07
+       6  Motor vs Naive dias_inv_prod    menor 297             51.5         0.3      -0.2407 3.762791e-01 1.000000e+00
+       6 Motor vs SNaive     fill_prod    mayor 297             63.6         6.4       0.0437 9.228610e-09 2.399439e-07
+       6 Motor vs SNaive       perdido    menor 300             63.0         7.3      -5.0000 4.775588e-09 1.432676e-07
+       6 Motor vs SNaive dias_inv_prod    menor 297             51.5         0.3      -0.2407 3.762791e-01 1.000000e+00
+       9  Motor vs Naive     fill_prod    mayor 297             64.3         6.4       0.0356 7.890266e-09 2.209274e-07
+       9  Motor vs Naive       perdido    menor 300             63.7         7.3      -5.0000 8.627591e-09 2.329449e-07
+       9  Motor vs Naive dias_inv_prod    menor 297             56.6         0.3      -0.7947 1.140514e-01 1.000000e+00
+       9 Motor vs SNaive     fill_prod    mayor 297             54.2         8.4       0.0181 6.524795e-04 1.304959e-02
+       9 Motor vs SNaive       perdido    menor 300             53.7         9.3      -2.0000 8.148116e-04 1.466661e-02
+       9 Motor vs SNaive dias_inv_prod    menor 297             52.9         0.3      -0.2870 1.012979e-01 1.000000e+00
+      12  Motor vs Naive     fill_prod    mayor 297             62.0         3.7       0.0363 1.109895e-06 2.441769e-05
+      12  Motor vs Naive       perdido    menor 300             61.3         4.7      -4.0000 5.280023e-07 1.267206e-05
+      12  Motor vs Naive dias_inv_prod    menor 297             58.6         0.0      -1.8760 1.651875e-03 2.643000e-02
+      12 Motor vs SNaive     fill_prod    mayor 297             46.8         6.7       0.0000 7.646548e-01 1.000000e+00
+      12 Motor vs SNaive       perdido    menor 300             46.3         7.7       0.0000 3.359033e-01 1.000000e+00
+      12 Motor vs SNaive dias_inv_prod    menor 297             46.5         0.0       1.0000 8.308079e-01 1.000000e+00
+      18  Motor vs Naive     fill_prod    mayor 297             59.3         5.1       0.0323 2.280506e-03 3.420759e-02
+      18  Motor vs Naive       perdido    menor 300             58.7         6.0      -4.0000 6.789533e-04 1.304959e-02
+      18  Motor vs Naive dias_inv_prod    menor 297             61.6         0.0      -2.8966 7.922759e-07 1.822235e-05
+      18 Motor vs SNaive     fill_prod    mayor 297             45.1         5.7       0.0000 8.979081e-01 1.000000e+00
+      18 Motor vs SNaive       perdido    menor 300             44.7         6.7       0.0000 7.241811e-01 1.000000e+00
+      18 Motor vs SNaive dias_inv_prod    menor 297             52.5         0.3      -0.5922 5.109190e-02 5.620109e-01
+      24  Motor vs Naive     fill_prod    mayor 297             45.8         5.7       0.0000 8.560267e-03 1.027232e-01
+      24  Motor vs Naive       perdido    menor 300             45.3         6.7       0.0000 6.996813e-03 9.095857e-02
+      24  Motor vs Naive dias_inv_prod    menor 297             63.0         0.0      -2.5445 2.342463e-04 4.919173e-03
+      24 Motor vs SNaive     fill_prod    mayor 297             47.8        13.1       0.0000 2.826698e-03 3.957378e-02
+      24 Motor vs SNaive       perdido    menor 300             47.3        14.0       0.0000 1.489454e-03 2.532072e-02
+      24 Motor vs SNaive dias_inv_prod    menor 297             44.1         1.7       0.4889 3.111839e-01 1.000000e+00
+
+Tiempo total: 170.9 s

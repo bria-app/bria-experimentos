@@ -1,0 +1,22 @@
+1) Verificacion de calendario (venta total del M5 por dia):
+   median_daily_total: 33830
+   total_2011-12-25: 13
+   total_2011-12-24: 29958
+   total_2012-12-25: 11
+   total_2012-12-24: 32623
+   total_2013-12-25: 20
+   total_2013-12-24: 31077
+   total_2014-12-25: 20
+   total_2014-12-24: 29617
+   total_2015-12-25: 14
+   total_2015-12-24: 36227
+
+2) Exp. 3b - cambio del modelo ganador entre condiciones (% de productos):
+   H=30 L=12: A->B 41.0 %, A->C 40.0 %
+   H=30 L=24: A->B 48.0 %, A->C 41.0 %
+   H=90 L=12: A->B 31.0 %, A->C 29.0 %
+   H=90 L=24: A->B 41.0 %, A->C 34.0 %
+
+3) Exp. 3b - unidades recuperadas por la reparacion (serie limpiada C - serie limpiada B):
+   L=12: recuperadas 5294.0 de 5322 censuradas (99.5 %)
+   L=24: recuperadas 13717.6 de 12183 censuradas (112.6 %)

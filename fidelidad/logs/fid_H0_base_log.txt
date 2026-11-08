@@ -1,0 +1,14 @@
+GRUPO H0_base: ['base_literal', 'base_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                    h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+base_literal  3.57/3.14  2.77/2.35  3.80/2.47  6.39/4.69  6.24/4.64  5.15/3.20  4.83/3.54
+base_refit    2.39/2.23  2.72/2.46  2.98/2.25  3.14/2.16  3.46/2.30  4.77/3.29  3.29/2.55
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                    h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+base_literal  2.66/2.53  2.06/1.86  2.78/1.94  4.64/3.76  4.54/3.48  3.74/2.47  4.02/3.29
+base_refit    1.80/1.77  2.04/1.90  2.21/1.74  2.32/1.77  2.55/1.79  3.52/2.32  2.80/2.37
+base_literal: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+base_refit: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+tiempo 13.0 s

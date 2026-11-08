@@ -1,0 +1,14 @@
+GRUPO H10_error_de_ajuste: ['ajuste_ult15_matlab_refit', 'ajuste_ult15_base_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                                 h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+ajuste_ult15_base_refit    1.34/1.22  1.16/1.05  0.86/0.75  1.07/0.89  1.00/0.82  1.37/1.20  1.06/0.92
+ajuste_ult15_matlab_refit  2.12/1.83  1.92/1.58  1.31/1.05  1.27/1.00  1.28/1.11  1.38/1.11  1.45/1.20
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                                 h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+ajuste_ult15_base_refit    1.03/0.91  0.90/0.78  0.65/0.59  0.80/0.70  0.74/0.65  1.02/0.95  0.95/0.86
+ajuste_ult15_matlab_refit  1.59/1.43  1.45/1.21  0.99/0.84  0.96/0.76  0.95/0.79  1.03/0.83  1.27/1.10
+ajuste_ult15_base_refit: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+ajuste_ult15_matlab_refit: N -> {1: 159, 2: 45, 3: 22, 4: 71, 5: 123}; sustituciones SNaive 0
+tiempo 15.8 s

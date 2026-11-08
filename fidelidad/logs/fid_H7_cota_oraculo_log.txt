@@ -1,0 +1,17 @@
+GRUPO H7_cota_oraculo: ['oraculo_base', 'oraculo_matlab', 'oraculo_base_N5']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                       h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+oraculo_base     1.42/1.12  1.19/0.90  1.23/1.04  1.36/1.02  1.41/1.04  1.65/1.11  1.34/1.02
+oraculo_base_N5  1.22/0.96  1.18/0.84  1.03/0.82  1.23/0.82  1.19/0.80  1.25/0.88  1.16/0.91
+oraculo_matlab   2.07/1.42  1.87/1.22  1.29/1.14  1.58/1.24  1.76/1.27  1.88/1.36  1.69/1.28
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                       h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+oraculo_base     1.09/0.84  0.91/0.71  0.92/0.83  1.02/0.80  1.06/0.83  1.24/0.90  1.20/0.97
+oraculo_base_N5  0.93/0.73  0.90/0.65  0.77/0.64  0.92/0.62  0.89/0.63  0.94/0.69  1.01/0.82
+oraculo_matlab   1.58/1.09  1.43/0.95  0.99/0.88  1.21/0.95  1.34/0.94  1.44/1.01  1.51/1.17
+oraculo_base: N -> {1: 254, 2: 87, 3: 24, 4: 15, 5: 40}; sustituciones SNaive 0
+oraculo_base_N5: N -> {5: 420}; sustituciones SNaive 0
+oraculo_matlab: N -> {1: 159, 2: 45, 3: 22, 4: 71, 5: 123}; sustituciones SNaive 0
+tiempo 17.1 s

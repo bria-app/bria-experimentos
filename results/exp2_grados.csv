@@ -1,0 +1,5 @@
+grado,FTGM_OLS,FTGM_Ridge,SNaive_ref(k>=13)
+I-Excelente,9,8,0
+II-Bueno,18,14,3
+III-Calificado,10,15,7
+IV-No calificado,33,33,60

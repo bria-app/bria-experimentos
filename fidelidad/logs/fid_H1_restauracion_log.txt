@@ -1,0 +1,14 @@
+GRUPO H1_restauracion: ['diff_literal', 'diff_refit']
+
+MASE media/mediana (paper FTGM 1-15: (1.65, 1.28))
+                    h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+diff_literal  3.76/3.41  2.88/2.41  3.37/2.55  6.11/4.43  6.45/4.81  5.28/3.54  4.78/3.55
+diff_refit    2.09/1.94  2.68/2.26  2.92/2.18  3.15/2.39  3.42/2.40  4.68/3.19  3.21/2.54
+
+RMSSE media/mediana (paper FTGM 1-15: (1.38, 1.04))
+                    h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+diff_literal  2.81/2.63  2.15/1.85  2.48/1.95  4.44/3.58  4.69/3.70  3.85/2.71  3.99/3.27
+diff_refit    1.57/1.56  2.01/1.77  2.17/1.72  2.34/1.70  2.53/1.79  3.45/2.51  2.75/2.35
+diff_literal: N -> {1: 250, 2: 80, 3: 37, 4: 21, 5: 32}; sustituciones SNaive 0
+diff_refit: N -> {1: 250, 2: 80, 3: 37, 4: 21, 5: 32}; sustituciones SNaive 0
+tiempo 14.5 s

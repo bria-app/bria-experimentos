@@ -1,0 +1,104 @@
+EXPERIMENTO 1 - Replicacion de fidelidad (Ye et al., 2024)
+python 3.11.4 (Windows-10-10.0.26300-SP0)
+cpu_count 16
+numpy 2.4.4, scipy 1.16.3, pandas 2.3.3, statsmodels 0.14.6, scikit-learn 1.7.2, matplotlib 3.10.7
+motor inventory-dss-ftgm-engine commit be6a98f8bb3a6ebc2c00f46a0ef7a0dc0c28e456 Sat Sep 19 13:50:49 2026 -0500 (arbol limpio)
+Series: 70 x 63 meses (2011-02-01 .. 2016-04-01)
+Tabla C.1 (theta = [a0, b0, a11, a21, b11, b21]) Hobbies_1_CA_1, N=1:
+n_obs_estimacion  theta_0      theta_1  theta_2   theta_3     theta_4     theta_5
+              37 0.005553 10770.537418 0.001277 -0.002340 -826.814441 1135.777668
+              42 0.005563 10768.429447 0.001249 -0.002383 -821.417022 1143.052881
+              43 0.005681 10745.458372 0.001110 -0.002551 -796.994147 1175.880718
+   paper_TablaC1 0.005600 10771.060000 0.001300 -0.002300 -826.690000 1135.560000
+Verificacion EDO (motor RK45 vs DOP853 rtol=1e-11): 350 ajustes estables de 350; max diferencia relativa al nivel medio: ajuste 3.66e-04, pronostico 2.65e-03
+  10/70 series (126 s)
+  20/70 series (192 s)
+  30/70 series (255 s)
+  40/70 series (313 s)
+  50/70 series (359 s)
+  60/70 series (413 s)
+  70/70 series (445 s)
+
+MASE (media / mediana sobre 70 series; promedio de 6 origenes por serie)
+                      h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+modelo                                                                                     
+FTGM_OLS_paper  3.57/3.14  2.77/2.35  3.80/2.47  6.39/4.69  6.24/4.64  5.15/3.20  4.83/3.54
+FTGM_OLS_refit  2.39/2.23  2.72/2.46  2.98/2.25  3.14/2.16  3.46/2.30  4.77/3.29  3.29/2.55
+FTGM_Ridge      2.21/2.09  2.54/2.18  2.71/2.02  3.10/2.33  3.66/2.36  4.38/3.18  3.15/2.51
+FTGM_OLS_ancla  2.31/2.22  2.62/2.43  2.85/2.28  3.01/2.18  3.32/2.26  4.60/3.27  3.16/2.54
+Motor_torneo    1.46/1.18  1.78/1.58  2.20/1.93  2.94/2.36  3.20/2.41  3.85/2.98  2.65/2.26
+SNaive          2.15/1.77  2.16/1.77  2.36/2.15  2.81/2.11  2.84/2.01  3.81/2.90  2.74/2.40
+Naive           1.31/1.20  1.90/1.65  2.29/1.94  3.05/2.54  2.84/2.01  3.64/2.83  2.57/2.30
+ETS             1.24/1.15  1.71/1.59  2.12/1.77  2.74/2.10  2.88/2.21  3.52/2.67  2.43/2.05
+SARIMA          1.29/1.16  1.71/1.50  1.87/1.42  2.42/1.69  2.65/1.81  3.36/2.36  2.28/1.68
+
+RMSSE (media / mediana sobre 70 series; promedio de 6 origenes por serie)
+                      h=1        h=3        h=6        h=9       h=12       h=15     h=1-15
+modelo                                                                                     
+FTGM_OLS_paper  2.66/2.53  2.06/1.86  2.78/1.94  4.64/3.76  4.54/3.48  3.74/2.47  4.02/3.29
+FTGM_OLS_refit  1.80/1.77  2.04/1.90  2.21/1.74  2.32/1.77  2.55/1.79  3.52/2.32  2.80/2.37
+FTGM_Ridge      1.67/1.73  1.91/1.72  2.01/1.59  2.29/1.75  2.70/1.92  3.24/2.52  2.64/2.15
+FTGM_OLS_ancla  1.75/1.70  1.99/1.88  2.14/1.73  2.26/1.75  2.48/1.75  3.43/2.32  2.74/2.36
+Motor_torneo    1.11/0.91  1.37/1.22  1.69/1.55  2.26/1.82  2.44/1.94  2.93/2.42  2.34/2.03
+SNaive          1.62/1.33  1.64/1.39  1.80/1.69  2.15/1.66  2.17/1.58  2.87/2.27  2.40/2.07
+Naive           1.00/0.92  1.45/1.29  1.76/1.59  2.33/2.07  2.17/1.58  2.76/2.28  2.30/2.10
+ETS             0.95/0.88  1.31/1.22  1.64/1.41  2.11/1.65  2.20/1.68  2.67/2.12  2.18/1.85
+SARIMA          0.98/0.87  1.31/1.14  1.43/1.10  1.84/1.32  2.02/1.39  2.58/1.86  2.04/1.56
+
+Brecha vs Tabla 1 del paper (replica - paper), h=1-15:
+modelo_paper modelo_replica metrica    h  paper_media  replica_media  brecha_media  paper_mediana  replica_mediana  brecha_mediana
+        FTGM FTGM_OLS_paper    MASE 1-15         1.65         4.8254        3.1754           1.28           3.5448          2.2648
+        FTGM FTGM_OLS_refit    MASE 1-15         1.65         3.2916        1.6416           1.28           2.5500          1.2700
+        FTGM     FTGM_Ridge    MASE 1-15         1.65         3.1486        1.4986           1.28           2.5133          1.2333
+        FTGM FTGM_OLS_paper   RMSSE 1-15         1.38         4.0170        2.6370           1.04           3.2873          2.2473
+        FTGM FTGM_OLS_refit   RMSSE 1-15         1.38         2.8049        1.4249           1.04           2.3681          1.3281
+        FTGM     FTGM_Ridge   RMSSE 1-15         1.38         2.6420        1.2620           1.04           2.1518          1.1118
+      SNaive         SNaive    MASE 1-15         2.69         2.7430        0.0530           2.35           2.3974          0.0474
+      SNaive         SNaive   RMSSE 1-15         2.38         2.3979        0.0179           2.04           2.0704          0.0304
+      SARIMA         SARIMA    MASE 1-15         2.44         2.2769       -0.1631           1.98           1.6849         -0.2951
+        HWES            ETS    MASE 1-15         2.47         2.4270       -0.0430           1.97           2.0455          0.0755
+      SARIMA         SARIMA   RMSSE 1-15         2.27         2.0376       -0.2324           1.74           1.5554         -0.1846
+        HWES            ETS   RMSSE 1-15         2.34         2.1831       -0.1569           1.83           1.8510          0.0210
+
+% series mejor que SNaive (1-15) y Wilcoxon pareado:
+        modelo metrica  pct_series_mejor_que_SNaive  n_series  wilcoxon_p
+FTGM_OLS_paper    MASE                         28.6        70    0.000009
+FTGM_OLS_paper   RMSSE                         25.7        70    0.000002
+FTGM_OLS_refit    MASE                         44.3        70    0.177360
+FTGM_OLS_refit   RMSSE                         42.9        70    0.121646
+    FTGM_Ridge    MASE                         50.0        70    0.749769
+    FTGM_Ridge   RMSSE                         47.1        70    0.858337
+FTGM_OLS_ancla    MASE                         44.3        70    0.262419
+FTGM_OLS_ancla   RMSSE                         44.3        70    0.171787
+  Motor_torneo    MASE                         47.1        70    0.557080
+  Motor_torneo   RMSSE                         50.0        70    0.595443
+         Naive    MASE                         52.9        70    0.229122
+         Naive   RMSSE                         51.4        70    0.329864
+           ETS    MASE                         62.9        70    0.001174
+           ETS   RMSSE                         64.3        70    0.002103
+        SARIMA    MASE                         67.1        70    0.001355
+        SARIMA   RMSSE                         65.7        70    0.001328
+
+Primer lugar por RMSSE 1-15 (FTGM_OLS_paper vs SNaive, Naive, ETS, SARIMA):
+        modelo  veces_primer_lugar
+        SARIMA                  34
+        SNaive                  10
+FTGM_OLS_paper                   9
+         Naive                   9
+           ETS                   8
+
+FTGM_OLS_paper: orden elegido -> {1.0: 254, 2.0: 87, 3.0: 24, 4.0: 15, 5.0: 40}; ridge -> {0.0: 420}; casos con divergencia/sustitucion: 0 de 420
+
+FTGM_OLS_refit: orden elegido -> {1.0: 254, 2.0: 87, 3.0: 24, 4.0: 15, 5.0: 40}; ridge -> {0.0: 420}; casos con divergencia/sustitucion: 0 de 420
+
+FTGM_Ridge: orden elegido -> {1.0: 118, 2.0: 116, 3.0: 58, 4.0: 20, 5.0: 108}; ridge -> {0.0: 60, 0.5: 70, 3.0: 67, 10.0: 223}; casos con divergencia/sustitucion: 0 de 420
+
+FTGM_OLS_ancla: orden elegido -> {1.0: 254, 2.0: 87, 3.0: 24, 4.0: 15, 5.0: 40}; ridge -> {0.0: 420}; casos con divergencia/sustitucion: 0 de 420
+
+Motor_torneo: ganador -> {'DampedTrend': 113, 'SeasonalDamped': 101, 'FTGM': 83, 'FTGMCombo': 76, 'SeasonalNaive': 47}
+ETS: origenes con especificaciones descartadas por la salvaguarda: 0 de 420
+SARIMA: origenes con especificaciones descartadas por la salvaguarda: 1 de 420
+ETS elegido -> {'ETS(A,N,N)': 321, 'ETS(M,N,M)': 46, 'ETS(A,N,A)': 22, 'ETS(A,A,N)': 15, 'ETS(M,A,M)': 8, 'ETS(A,Ad,N)': 7, 'ETS(A,A,A)': 1}
+SARIMA: d=1 en 155 de 420; top: {'(0,1,0)(0,1,1)[12]': 67, '(1,0,0)(0,1,1)[12]': 50, '(1,0,0)(0,1,0)[12]': 39, '(0,1,1)(0,1,1)[12]': 24, '(1,0,0)(1,1,0)[12]': 23}
+
+Tiempo total: 445.4 s

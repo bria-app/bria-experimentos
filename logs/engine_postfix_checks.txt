@@ -1,0 +1,12 @@
+Motor FTGM - chequeos post-correcciones de auditoria (2026-11-02T16:46:40-05:00)
+rama: fix/auditoria-2026-11; base: be6a98f (cambios sin commit)
+
+== python -m pytest -q
+......................................................................   [100%]
+70 passed in 13.20s
+
+== python -m ruff check .
+All checks passed!
+
+== python -m mypy --strict app
+Success: no issues found in 22 source files

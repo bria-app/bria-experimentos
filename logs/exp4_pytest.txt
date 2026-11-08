@@ -1,0 +1,6 @@
+$ cd <thesis>\inventory-dss-ftgm-engine
+$ PYTHONPATH=<thesis>\inventory-dss-ftgm-engine <home>\AppData\Local\Programs\Python\Python311\python.exe -m pytest -q
+(codigo de salida 0, 5.1 s)
+
+........................................                                 [100%]
+40 passed in 4.12s

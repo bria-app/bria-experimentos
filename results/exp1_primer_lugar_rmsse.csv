@@ -1,0 +1,6 @@
+modelo,veces_primer_lugar
+SARIMA,34
+SNaive,10
+FTGM_OLS_paper,9
+Naive,9
+ETS,8

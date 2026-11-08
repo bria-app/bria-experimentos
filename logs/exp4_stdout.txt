@@ -1,0 +1,18 @@
+EXPERIMENTO 4 - Pruebas automatizadas y latencia
+python 3.11.4 (Windows-10-10.0.26300-SP0)
+cpu_count 16
+numpy 2.4.4, scipy 1.16.3, pandas 2.3.3, statsmodels 0.14.6, scikit-learn 1.7.2, matplotlib 3.10.7
+motor inventory-dss-ftgm-engine commit be6a98f8bb3a6ebc2c00f46a0ef7a0dc0c28e456 Sat Sep 19 13:50:49 2026 -0500 (arbol limpio)
+pytest: codigo de salida 0 en 5.1 s; ultima linea: 40 passed in 4.12s
+Elegibles: 17863 de 30490; poblacion por categoria: {'FOODS': 9583, 'HOBBIES': 2732, 'HOUSEHOLD': 5548}; muestra: {'FOODS': 161, 'HOBBIES': 46, 'HOUSEHOLD': 93}
+
+Latencia de ForecastService para un producto (50 repeticiones, proceso unico):
+                     producto  L_meses  H_dias frecuencia modelo_ganador  n_puntos  repeticiones  mediana_ms  p90_ms  min_ms  max_ms
+HOBBIES_1_159_CA_1_evaluation       12      30     weekly    DampedTrend       168            50        51.5    54.2    48.2    77.7
+HOBBIES_1_159_CA_1_evaluation       12      90     weekly    DampedTrend       168            50        49.5    56.8    46.9    71.0
+HOBBIES_1_159_CA_1_evaluation       24      30    monthly           FTGM       252            50        72.9    75.4    70.4    90.3
+HOBBIES_1_159_CA_1_evaluation       24      90    monthly      FTGMCombo       252            50        71.2    83.6    68.9   109.2
+
+real	0m22.828s
+user	0m0.016s
+sys	0m0.031s
